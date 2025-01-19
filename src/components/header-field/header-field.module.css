@@ -1,0 +1,18 @@
+.header {
+    background-color: var(--bgGray);
+    padding: 5px 169px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.buttons {
+    margin-left: auto;
+}
+
+.loginButton {
+    margin-right: 16px;
+}

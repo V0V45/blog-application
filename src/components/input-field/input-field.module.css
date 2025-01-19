@@ -1,0 +1,26 @@
+.label {
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: var(--accentColor);
+    margin-bottom: 8px;
+}
+
+.input {
+    margin-bottom: 16px;
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: var(--accentColor);
+    border: 1px solid var(--accentColor);
+    border-radius: 16px;
+    background-color: transparent;
+    padding: 8px 16px;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid var(--activeColor);
+    color: var(--activeColor);
+}
