@@ -11,7 +11,7 @@ export default function HeaderField({ className }) {
             <Logo onClick={() => navigate("/")} />
             <div className={classes.buttons}>
                 <LoginButton onClick={() => navigate("/login")} className={classes.loginButton}>Войти</LoginButton>
-                <LoginButton className={classes.regButton}>Создать аккаунт</LoginButton>
+                <LoginButton onClick={() => navigate("/register")} className={classes.regButton}>Создать аккаунт</LoginButton>
             </div>
         </header>
     );
