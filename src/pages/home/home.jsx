@@ -1,18 +1,11 @@
+import HeaderField from "../../components/header-field/header-field";
 import BlogPost from "../../components/blog-post/blog-post";
-import LoginButton from "../../components/login-button/login-button";
-import Logo from "../../components/logo/logo";
 import classes from "./home.module.css";
 
 export default function Home() {
     return (
         <>
-            <header className={classes.header}>
-                <Logo />
-                <div className={classes.buttons}>
-                    <LoginButton className={classes.loginButton}>Войти</LoginButton>
-                    <LoginButton className={classes.regButton}>Создать аккаунт</LoginButton>
-                </div>
-            </header>
+            <HeaderField />
             <main className={classes.blog}>
                 <BlogPost userAvatar="/images/avatars/1.jpg" userName="Айгуль Зарипова" dateTime="1 час назад">
                     Привет, друзья! 👋 Сегодня хочу поделиться с вами своими мыслями о  том, как важно иногда просто остановиться и вдохнуть полной грудью. 🍃
@@ -34,6 +27,5 @@ export default function Home() {
                 </BlogPost>
             </main>
         </>
-
     );
 }

@@ -1,21 +1,3 @@
-.header {
-    background-color: var(--bgGray);
-    padding: 5px 169px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.buttons {
-    margin-left: auto;
-}
-
-.loginButton {
-    margin-right: 16px;
-}
-
 .blog {
     margin: 69px 160px 0 160px;
 }
