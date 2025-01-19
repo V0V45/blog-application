@@ -16,6 +16,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .avatar {
@@ -30,6 +31,14 @@
     font-weight: 700;
     font-size: 32px;
     color: var(--accentColor);
+}
+
+.dateTime {
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--accentColor);
+    margin-left: auto;
 }
 
 .text {
