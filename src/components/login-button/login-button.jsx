@@ -1,7 +1,7 @@
 import classes from "./login-button.module.css";
 
-export default function LoginButton({children, className}) {
+export default function LoginButton({children, className, onClick}) {
     return (
-        <button className={`${classes.button} ${className}`}>{children}</button>
+        <button onClick={onClick} className={`${classes.button} ${className}`}>{children}</button>
     );
 }
