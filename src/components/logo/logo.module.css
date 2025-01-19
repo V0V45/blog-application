@@ -1,0 +1,26 @@
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.text {
+    font-family: "Daneehand";
+    font-size: 40px;
+    transition: color 0.3s ease-in-out;
+}
+
+.noHover {
+    color: var(--accentColor);
+}
+
+.hover {
+    color: var(--activeColor);
+}

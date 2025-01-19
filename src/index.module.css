@@ -1,0 +1,47 @@
+:root {
+  --accentColor: #00B88D;
+  --activeColor: #DA0075;
+  --bgGray: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: "Daneehand";
+  src: url("/public/fonts/daneehand-regular-cyr.ttf");
+}
+
+@font-face {
+  font-family: "Vela Sans";
+  font-weight: 700;
+  src: url("/public/fonts/vela-sans-bold.ttf");
+}
+
+@font-face {
+  font-family: "Vela Sans";
+  font-weight: 400;
+  src: url("/public/fonts/vela-sans-regular.ttf");
+}
+
+@font-face {
+  font-family: "Vela Sans";
+  font-weight: 200;
+  src: url("/public/fonts/vela-sans-extra-light.ttf");
+}

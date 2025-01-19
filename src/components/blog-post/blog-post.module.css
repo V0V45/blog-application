@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--bgGray);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    border-radius: 50px;
+    width: 51px;
+    height: 51px;
+    margin-right: 16px;
+}
+
+.name {
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--accentColor);
+}
+
+.text {
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color: #fff;
+}
+
+.container:not(:last-child) {
+    margin-bottom: 16px;
+}
