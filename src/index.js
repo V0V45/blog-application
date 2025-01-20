@@ -10,15 +10,15 @@ import RegPage from './pages/reg-page/reg-page';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userInfo, setUserInfo] = useState(null);
 
   return (
     <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path='login' element={<LoginPage isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path='register' element={<RegPage isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path='/' element={<Home userInfo={userInfo} setUserInfo={setUserInfo} />} />
+        <Route path='login' element={<LoginPage userInfo={userInfo} setUserInfo={setUserInfo} />} />
+        <Route path='register' element={<RegPage userInfo={userInfo} setUserInfo={setUserInfo} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
