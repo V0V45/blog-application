@@ -1,0 +1,47 @@
+.container {
+    background-color: var(--bgGray);
+    border-radius: 8px;
+    margin: 69px 160px 0 160px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2ButtonContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.h2 {
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: var(--accentColor);
+}
+
+.textarea {
+    width: 100%;
+    background-color: transparent;
+    padding: 8px 16px;
+    border: 2px solid var(--accentColor);
+    border-radius: 24px;
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color: #fff;
+    resize: none;
+    transition: border 0.3s ease-in-out;
+}
+
+.textarea:focus {
+    outline: none;
+    border: 2px solid var(--activeColor);
+}
