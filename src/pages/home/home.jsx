@@ -19,10 +19,10 @@ export default function Home({ userInfo, setUserInfo }) {
         <>
             <HeaderField userInfo={userInfo} setUserInfo={setUserInfo} addPostShown={addPostShown} setAddPostShown={setAddPostShown} />
             <main className={classes.blog}>
-                {addPostShown && <AddPost />}
+                {addPostShown && <AddPost userInfo={userInfo} posts={posts} setPosts={setPosts} />}
                 {posts.map((post) => {
                     return (
-                        <BlogPost userName={post.userName} dateTime={post.dateTime} userAvatar={`/images/avatars/${post.userId - 1}.jpg`}>
+                        <BlogPost userName={post.userName} dateTime={post.datetime} userAvatar={`/images/avatars/${post.userId - 1}.jpg`}>
                             {post.content}
                         </BlogPost>
                     );
