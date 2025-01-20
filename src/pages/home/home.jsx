@@ -3,6 +3,7 @@ import BlogPost from "../../components/blog-post/blog-post";
 import classes from "./home.module.css";
 import { useState, useEffect } from "react";
 import AddPost from "../../components/add-post/add-post";
+import { nanoid } from "nanoid";
 
 export default function Home({ userInfo, setUserInfo }) {
     const [posts, setPosts] = useState([]);
@@ -22,7 +23,7 @@ export default function Home({ userInfo, setUserInfo }) {
                 {addPostShown && <AddPost userInfo={userInfo} posts={posts} setPosts={setPosts} />}
                 {posts.map((post) => {
                     return (
-                        <BlogPost userName={post.userName} dateTime={post.datetime} userAvatar={`/images/avatars/${post.userId - 1}.jpg`}>
+                        <BlogPost key={nanoid()} userName={post.userName} dateTime={post.datetime} userAvatar={`/images/avatars/${post.userId - 1}.jpg`}>
                             {post.content}
                         </BlogPost>
                     );
