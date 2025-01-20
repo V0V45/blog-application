@@ -47,7 +47,7 @@ export default function LoginPage({ isLoggedIn, setIsLoggedIn }) {
                         <button type="submit" className={classes.enterButton}>Войти</button>
                     </form>
                     <div className={classes.additionalButtons}>
-                        <button className={classes.createAccButton}>Создать<br />аккаунт</button>
+                        <button className={classes.createAccButton} onClick={() => navigate("/register")}>Создать<br />аккаунт</button>
                         <button className={classes.forgotPasswordButton}>Забыл<br />пароль</button>
                     </div>
                 </div>
