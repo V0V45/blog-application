@@ -9,10 +9,27 @@
     text-decoration: none;
 }
 
-.buttons {
+.buttons,
+.user {
     margin-left: auto;
 }
 
 .loginButton {
+    margin-right: 16px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.userName {
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--accentColor);
     margin-right: 16px;
 }
