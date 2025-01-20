@@ -5,7 +5,7 @@ import { useState } from "react";
 import { isEmptyString } from "../../functions/string-functions";
 import { useNavigate } from "react-router";
 
-export default function RegPage({ isLoggedIn, setIsLoggedIn }) {
+export default function RegPage({ userInfo, setUserInfo }) {
     let navigate = useNavigate();
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
@@ -40,7 +40,7 @@ export default function RegPage({ isLoggedIn, setIsLoggedIn }) {
 
     return (
         <>
-            <HeaderField isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <HeaderField userInfo={userInfo} setUserInfo={setUserInfo} />
             <main className={classes.container}>
                 <div className={classes.regContainer}>
                     <h1 className={classes.h1}>Раздели свои мысли</h1>

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import { isEmptyString } from "../../functions/string-functions";
 
-export default function LoginPage({ isLoggedIn, setIsLoggedIn }) {
+export default function LoginPage({ userInfo, setUserInfo }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -24,7 +24,7 @@ export default function LoginPage({ isLoggedIn, setIsLoggedIn }) {
             });
             const data = await response.json();
             if (response.ok) {
-                setIsLoggedIn(true);
+                setUserInfo(data);
                 navigate("/");
             } else {
                 setError(data.message);
@@ -36,7 +36,7 @@ export default function LoginPage({ isLoggedIn, setIsLoggedIn }) {
 
     return (
         <>
-            <HeaderField isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <HeaderField userInfo={userInfo} setUserInfo={setUserInfo} />
             <main className={classes.container}>
                 <div className={classes.loginContainer}>
                     <h1 className={classes.h1}>Вход в мысли</h1>

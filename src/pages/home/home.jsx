@@ -3,7 +3,7 @@ import BlogPost from "../../components/blog-post/blog-post";
 import classes from "./home.module.css";
 import { useState, useEffect } from "react";
 
-export default function Home({ isLoggedIn, setIsLoggedIn }) {
+export default function Home({ userInfo, setUserInfo }) {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,8 @@ export default function Home({ isLoggedIn, setIsLoggedIn }) {
 
     return (
         <>
-            <HeaderField isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <HeaderField userInfo={userInfo} setUserInfo={setUserInfo} />
+            {/* TODO: добавить возможность добавлять и удалять */}
             <main className={classes.blog}>
                 {posts.map((post) => {
                     return (

@@ -3,16 +3,16 @@ import Logo from "../../components/logo/logo";
 import LoginButton from "../../components/login-button/login-button";
 import { useNavigate } from "react-router";
 
-export default function HeaderField({ isLoggedIn, setIsLoggedIn, className }) {
+export default function HeaderField({ userInfo, setUserInfo, className }) {
     let navigate = useNavigate();
 
     return (
         <header className={`${classes.header} ${className}`}>
             <Logo onClick={() => navigate("/")} />
-            {isLoggedIn ? (
+            {userInfo ? (
                 <div className={classes.user}>
-                    <p className={classes.userName}>User Name</p>
-                    <LoginButton onClick={() => setIsLoggedIn(false)}>Выйти</LoginButton>
+                    <p className={classes.userName}>{`${userInfo.name} ${userInfo.surname}`}</p>
+                    <LoginButton onClick={() => setUserInfo(null)}>Выйти</LoginButton>
                 </div>
             ) : (
                 <div className={classes.buttons}>
