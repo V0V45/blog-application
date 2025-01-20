@@ -1,12 +1,6 @@
 import classes from "./input-field.module.css";
-import { useState } from "react";
 
-export default function InputField({name, placeholder, labelText, type, inputClassName, labelClassName}) {
-    const [value, setValue] = useState("");
-
-    function handleChange(event) {
-        setValue(event.target.value);
-    }
+export default function InputField({name, placeholder, labelText, type, inputClassName, labelClassName, value, handleChange}) {
 
     return (
         <>
