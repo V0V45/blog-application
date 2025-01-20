@@ -4,7 +4,7 @@ import LoginButton from "../../components/login-button/login-button";
 import { useNavigate } from "react-router";
 import AddPostButton from "../add-post-button/add-post-button";
 
-export default function HeaderField({ userInfo, setUserInfo, className }) {
+export default function HeaderField({ userInfo, setUserInfo, addPostShown, setAddPostShown, className }) {
     let navigate = useNavigate();
 
     return (
@@ -12,7 +12,7 @@ export default function HeaderField({ userInfo, setUserInfo, className }) {
             <Logo onClick={() => navigate("/")} />
             {userInfo ? (
                 <>
-                <AddPostButton className={classes.addPostButton} />
+                <AddPostButton className={classes.addPostButton} onClick={() => setAddPostShown(!addPostShown)} />
                 <div className={classes.user}>
                     <p className={classes.userName}>{`${userInfo.name} ${userInfo.surname}`}</p>
                     <LoginButton onClick={() => setUserInfo(null)}>Выйти</LoginButton>
