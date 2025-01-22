@@ -12,7 +12,10 @@ export default function Home({ userInfo, setUserInfo }) {
     useEffect(() => {
         fetch("http://localhost:5000/api/postList")
             .then((response) => response.json())
-            .then((data) => setPosts(data))
+            .then((data) => {
+                const sortedPosts = data.sort((a, b) => new Date(b.datetime) - new Date(a.datetime));
+                setPosts(sortedPosts);
+            })
             .catch((error) => console.error("Ошибка при загрузке постов", error));
     }, []);
 

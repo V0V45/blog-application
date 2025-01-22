@@ -17,7 +17,7 @@ export default function AddPost({className, userInfo, posts, setPosts}) {
             });
             const data = await response.json();
             if (response.ok) {
-                setPosts([...posts, data]);
+                setPosts([data, ...posts]);
             } else {
                 console.log(data.message);
             }
